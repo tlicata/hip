@@ -1,3 +1,38 @@
 // Place all the styles related to the moments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#timeline {
+    margin-top: 2em;
+    position: relative;
+}
+
+.markers {
+    border-top: 2px solid black;
+    position: absolute;
+
+    .decade {
+        border-left: 2px solid lightgray;
+        color: lightgray;
+        padding: .3em;
+        position: absolute;
+    }
+}
+
+.moment {
+    border-left: 2px solid black;
+    padding-left: 10px;
+    position: absolute;
+
+    .name, .date {
+        white-space: nowrap;
+    }
+
+    &.low {
+        padding-top: 40px;
+    }
+    &.high {
+        padding-bottom: 30px;
+        padding-top: 10px;
+    }
+}

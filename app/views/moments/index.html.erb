@@ -1,31 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Moments</h1>
+<h1>He said I'm Tragically Hip...</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Info</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @moments.each do |moment| %>
-      <tr>
-        <td><%= moment.name %></td>
-        <td><%= moment.date %></td>
-        <td><%= moment.info %></td>
-        <td><%= link_to 'Show', moment %></td>
-        <td><%= link_to 'Edit', edit_moment_path(moment) %></td>
-        <td><%= link_to 'Destroy', moment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="timeline">
+  <% @moments.each do |moment| %>
+  <div class="moment <%= cycle('high', 'low') %>">
+    <div class="name"><%= moment.name %></div>
+    <div class="date"><%= moment.date %></div>
+    <!-- <div class="info"><%= moment.info %></div> -->
+  </div>
+  <% end %>
+  <div class="markers">
+    <div class="decade">1950</div>
+    <div class="decade">1960</div>
+    <div class="decade">1970</div>
+    <div class="decade">1980</div>
+    <div class="decade">1990</div>
+    <div class="decade">2000</div>
+    <div class="decade">2010</div>
+    <div class="decade">2020</div>
+  </div>
+</div>
 
 <br>
 
-<%= link_to 'New Moment', new_moment_path %>
+<%# link_to 'New Moment', new_moment_path %>
