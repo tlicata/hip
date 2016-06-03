@@ -35,4 +35,21 @@ $(document).ready(() ->
     top: momentHeight
     width: rightmost.getBoundingClientRect().right + "px"
   })
+
+  # Make sure timeline div takes up enough space to cover its
+  # absolutely positioned children.
+  $("#timeline").css("height", (momentHeight * 2) + "px")
+
+  # Show more info in #display element.
+  display = (link) ->
+    $.get("moments/#{link}", (html) ->
+      $("#display").html(html)
+    )
+
+  displayHash = () ->
+    display(window.location.hash.substr(1))
+
+  window.addEventListener("hashchange", displayHash);
+
+  displayHash() if window.location.hash
 );
