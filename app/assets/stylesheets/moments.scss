@@ -4,51 +4,38 @@
 
 $gutter: 20px;
 
-h1, #display {
+body {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+h1 {
     margin: 0;
     padding: $gutter;
+    text-align: center;
 }
 
 #timeline {
-    margin: $gutter*2 0 $gutter 0;
+    margin-top: $gutter;
     position: relative;
-    overflow-x: scroll;
 }
 
-.markers {
-    border-top: 2px solid black;
+.markers .decade {
+    color: lightgray;
     position: absolute;
-
-    .decade {
-        border-left: 2px solid lightgray;
-        color: lightgray;
-        padding: .3em;
-        position: absolute;
-    }
+    right: .5em;
 }
 
 .moment {
     border-left: 2px solid black;
-    padding-left: 10px;
+    padding-left: .5em;
     position: absolute;
 
     .name, .date {
         white-space: nowrap;
     }
-
-    &.low {
-        padding-top: 40px;
-    }
-    &.high {
-        padding-bottom: 30px;
-        padding-top: 10px;
-    }
 }
 
-#display {
-    max-width: 800px;
-
-    p:first-child {
-        margin-top: 0;
-    }
+#info {
+    padding: $gutter;
 }

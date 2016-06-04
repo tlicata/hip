@@ -15,7 +15,7 @@ class MomentsController < ApplicationController
         format.html { render status: 404, plain: "Not found" }
         format.json { render status: 404, json: "Not found" }
       else
-        format.html { render :show, location: @moment, layout: false }
+        format.html { render :show, location: @moment }
         format.json { render json: @moment }
       end
     end

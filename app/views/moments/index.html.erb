@@ -2,8 +2,8 @@
 
 <div id="timeline">
   <% @moments.each do |moment| %>
-  <div class="moment <%= cycle('high', 'low') %>">
-    <a href="#<%= moment.link %>">
+  <div class="moment">
+    <a href="moments/<%= moment.link %>">
       <div class="name"><%= moment.name %></div>
     </a>
     <div class="date"><%= moment.date %></div>
@@ -20,8 +20,6 @@
     <div class="decade">2020</div>
   </div>
 </div>
-
-<div id="display"></div>
 
 <br>
 

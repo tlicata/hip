@@ -5,54 +5,35 @@
 $(document).ready(() ->
 
   startDate = new Date("1950-01-01").getTime();
-  magic = 315360000;
+  pixelsPerDecade = 800;
+  millisecondsPerDecade = 1000 * 60 * 60 * 24 * 365 * 10;
+  pixelsPerMillisecond = pixelsPerDecade / millisecondsPerDecade;
 
   moments = $(".moment")
   momentHeight = moments.first().outerHeight();
 
-  # Sprawl moments horizontally.
+  # Space moments vertically.
+  previousBottom = 0
   moments.each((idx, moment) ->
     $moment = $(moment)
     date = new Date($moment.find(".date").html()).getTime();
-    $moment.css({
-      left: ((date - startDate) / magic) + "px"
-      top: if idx % 2 != 0 then "#{momentHeight}px" else "0"
-    });
+    ideal = (date - startDate) * pixelsPerMillisecond
+    space = if previousBottom > ideal then previousBottom else ideal
+    $moment.css(top: space + "px")
+    previousBottom = space + momentHeight
   );
 
-  # Sprawl decades horizontally.
+  # Sprawl decades vertically.
   decades = $(".decade")
   decades.each((idx, decade) ->
     $decade = $(decade)
     year = new Date("#{$decade.text()}-01-01").getTime()
-    $decade.css("left", ((year - startDate) / magic) + "px")
+    $decade.css("top", ((year - startDate) * pixelsPerMillisecond) + "px")
   )
 
-  # Position center line between high and low moments and across all
-  # the decades.
-  rightmost = decades.last().get(0)
+  # Stretch the timeline container to fit all the pieces.
+  bottomMost = decades.last().get(0)
   $(".markers").css({
-    top: momentHeight
-    width: rightmost.getBoundingClientRect().right + "px"
+    height: bottomMost.getBoundingClientRect().bottom + "px"
   })
-
-  # Make sure timeline div takes up enough space to cover its
-  # absolutely positioned children.
-  gutter = 20
-  scrollBarHeight = 10
-  gapForScrollBar = (3 * gutter) + scrollBarHeight;
-  $("#timeline").css("height", ((momentHeight * 2) + gapForScrollBar) + "px")
-
-  # Show more info in #display element.
-  display = (link) ->
-    $.get("moments/#{link}", (html) ->
-      $("#display").html(html)
-    )
-
-  displayHash = () ->
-    display(window.location.hash.substr(1))
-
-  window.addEventListener("hashchange", displayHash);
-
-  displayHash() if window.location.hash
 );
