@@ -17,8 +17,8 @@ Moment.create([
   {
     date: Date.new(1951, 8, 26),
     name: "Bill Barilko's disappears",
-    info: "On August 26, 1951, Barilko joined his dentist, Henry Hudson, on a flight aboard Hudson's Fairchild 24 floatplane to Seal River, Quebec, for a weekend fishing trip.[6] On the return trip, the single-engine plane disappeared and its passengers remained missing.",
-    link: "a-fishing-trip"
+    info: "On August 26, 1951, Barilko joined his dentist, Henry Hudson, on a flight aboard Hudson's Fairchild 24 floatplane to Seal River, Quebec, for a weekend fishing trip. On the return trip, the single-engine plane disappeared and its passengers remained missing.",
+    link: "he-was-on-a-fishing-trip"
   },
   {
     date: Date.new(1962, 4, 12),
