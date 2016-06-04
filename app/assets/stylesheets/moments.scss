@@ -5,6 +5,7 @@
 #timeline {
     margin: 4em 0 2em 0;
     position: relative;
+    overflow-x: scroll;
 }
 
 .markers {
@@ -35,8 +36,4 @@
         padding-bottom: 30px;
         padding-top: 10px;
     }
-}
-
-#display {
-    position: fixed;
 }
