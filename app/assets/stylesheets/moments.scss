@@ -2,13 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$gutter: 20px;
+
 h1, #display {
     margin: 0;
-    padding: 10px;
+    padding: $gutter;
 }
 
 #timeline {
-    margin: 2em 0;
+    margin: $gutter*2 0 $gutter 0;
     position: relative;
     overflow-x: scroll;
 }
@@ -45,4 +47,8 @@ h1, #display {
 
 #display {
     max-width: 800px;
+
+    p:first-child {
+        margin-top: 0;
+    }
 }

@@ -38,7 +38,10 @@ $(document).ready(() ->
 
   # Make sure timeline div takes up enough space to cover its
   # absolutely positioned children.
-  $("#timeline").css("height", (momentHeight * 2) + "px")
+  gutter = 20
+  scrollBarHeight = 10
+  gapForScrollBar = (3 * gutter) + scrollBarHeight;
+  $("#timeline").css("height", ((momentHeight * 2) + gapForScrollBar) + "px")
 
   # Show more info in #display element.
   display = (link) ->
