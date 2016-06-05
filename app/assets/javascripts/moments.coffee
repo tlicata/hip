@@ -10,6 +10,8 @@ $(document).ready(() ->
   pixelsPerMillisecond = pixelsPerDecade / millisecondsPerDecade;
 
   moments = $(".moment")
+  return if moments.length == 0
+
   momentHeight = moments.first().outerHeight();
 
   # Space moments vertically.
