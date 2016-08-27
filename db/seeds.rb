@@ -12,7 +12,8 @@ Moment.create([
     date: Date.new(1951, 4, 21),
     name: "Bill Barilko's last goal",
     info: "The last goal he ever scored (in overtime against the Montreal Canadiens' Gerry McNeil in Game 5 of the Stanley Cup final, on April 21, 1951) won the Maple Leafs the Stanley Cup",
-    link: "last-goal-he-ever-scored"
+    link: "last-goal-he-ever-scored",
+    tube: "JaeRrrtsCqU"
   },
   {
     date: Date.new(1951, 8, 26),

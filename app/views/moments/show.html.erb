@@ -1,3 +1,6 @@
 <div id="info">
   <p><%= @moment.info %></p>
+  <% if @moment.tube %>
+  <iframe width="100%" height="300px" src="https://www.youtube.com/embed/<%= @moment.tube %>" frameborder="0" allowfullscreen></iframe>
+  <% end %>
 </div>
