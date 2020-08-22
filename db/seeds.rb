@@ -104,6 +104,13 @@ Moment.create([
     link: "music-at-work"
   },
   {
+    date: Date.new(2001, 7, 3),
+    name: "Coke Machine Glow",
+    link: "coke-machine-glow",
+    info: "Coke Machine Glow is the first solo album released by Gord Downie, the singer for The Tragically Hip. It was released in 2001.",
+    tube: "uuzi2R3zpoo"
+  },
+  {
     date: Date.new(2002, 6, 11),
     name: "In Violet Light",
     link: "in-violet-light"
