@@ -146,5 +146,11 @@ Moment.create([
     info: "The final concert of the Man Machine Poem tour was held at the Rogers K-Rock Centre in the band's hometown of Kingston on August 20, 2016. The concert was attended by Canadian prime minister Justin Trudeau. The concert was aired by the Canadian Broadcasting Corporation as a live cross-platform broadcast on CBC Television, CBC Radio One, CBC Radio 2, CBC Music, and YouTube. The concert featured 30 songs and three encore sets, with the band finishing with a performance of 'Ahead by a Century'. The CBC's broadcast and live streaming of the concert, uninterrupted by advertisements, was watched by 11.7 million people (roughly one-third of the Canadian population).",
     link: "final-show",
     tube: "fGWLtkCmbWE?start=9138"
+  },
+  {
+    date: Date.new(2017, 10, 17),
+    name: "Gord Downie dies",
+    info: "Downie died of glioblastoma, a type of brain cancer, on October 17, 2017, at the age of 53 in Toronto.",
+    link: "gord-dies"
   }
 ])
